@@ -2,6 +2,10 @@
 
 if NOT EXIST "%cd%/.git" (
 	git init
+	set /p alias="Alias del repositorio: "
+	echo "-- Ahora debes crear el repositorio"
+	set /p direccion="Direccion del repositorio: "
+	git remote add
 )
 
 rem git pull
