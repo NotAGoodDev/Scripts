@@ -1,5 +1,6 @@
 @echo off
 
+ECHO "%cd%/.git"
 if NOT EXIST "%cd%/.git" (
 	git init
 	echo "# A" >> README.md
