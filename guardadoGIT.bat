@@ -8,9 +8,9 @@ if NOT EXIST "%cd%/.git" (
 	
 	echo "-- Recuerda modificar el Markdown si es Publico :)"
 	set /p alias="Alias del repositorio: "
-	echo "-- Ahora debes crear el repositorio"
+	echo "-- Ahora debes crear el repositorio y ssh-keygen -t rsa (si privado)"
 	set /p direccion="Direccion del repositorio: "
-	echo %alias% %direccion%
+	git remote add origin %direccion%
 	git remote add %alias% %direccion%
 	git push -u origin master
 )
