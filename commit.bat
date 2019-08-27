@@ -1,5 +1,4 @@
 @echo off
-rem Mejor rutas relativas a rutas absolutas, no desvelamos el arbol de directorios ~ Mas seguridad
 
 rem Guardar la carpeta Scripts
 echo Primero se va a actualizar la carpeta Scripts
