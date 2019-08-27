@@ -8,6 +8,7 @@ if NOT EXIST "%cd%/.git" (
 	echo "-- Ahora debes crear el repositorio"
 	set /p direccion="Direccion del repositorio: "
 	git remote add %alias% %direccion%
+	git push -u origin master
 )
 
 git pull
