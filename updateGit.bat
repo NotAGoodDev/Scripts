@@ -2,7 +2,7 @@
 
 if NOT EXIST "%cd%/.git" (
 	git init
-	echo "# A" >> README.md
+	cp C:\Users\Ortiz\Documents\Propio\Markdown\GitHubTemplate.md README.md
 	git add README.md
 	git commit -m "First commit, auto-created"
 	
