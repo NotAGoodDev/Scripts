@@ -3,6 +3,9 @@
 if NOT EXIST "%cd%/.git" (
 	git init
 	echo "# A" >> README.md
+	git add README.md
+	git commit -m "First Commit, auto-created"
+	
 	echo "-- Recuerda modificar el Markdown si es Publico :)"
 	set /p alias="Alias del repositorio: "
 	echo "-- Ahora debes crear el repositorio"
