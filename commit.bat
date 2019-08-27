@@ -2,9 +2,20 @@
 rem Mejor rutas relativas a rutas absolutas, no desvelamos el arbol de directorios ~ Mas seguridad
 rem Guardar la carpeta Scripts
 set /p scripts=Quieres actualizar la carpeta de Scripts? (Si/Yes/Else ~ No): 
-if "%scripts%"=="Si" or "%scripts%"=="S" or "%scripts%"=="Yes" or "%scripts%"=="Y" or "%scripts%"=="si" or "%scripts%"=="s" or "%scripts%"=="yes" or "%scripts%"=="y" (
-	echo "%scripts%"
-	echo "Si"
+
+rem Comprobacion logica -> Ifs anidados
+set result=false
+if "%scripts%"=="Si" set result=true
+if "%scripts%"=="si" set result=true
+if "%scripts%"=="Yes" set result=true
+if "%scripts%"=="yes" set result=true
+if "%scripts%"=="S" set result=true
+if "%scripts%"=="s" set result=true
+if "%scripts%"=="Y" set result=true
+if "%scripts%"=="y" set result=true
+
+rem Alguna coincicdencia
+if "%result%" == "true" (
 	CALL "guardadoGIT.bat"
 	echo !!Scripts guardados!!
 )
