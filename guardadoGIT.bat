@@ -2,6 +2,8 @@
 
 if NOT EXIST "%cd%/.git" (
 	git init
+	echo "# A" >> README.md
+	echo "-- Recuerda modificar el Markdown si es Publico :)"
 	set /p alias="Alias del repositorio: "
 	echo "-- Ahora debes crear el repositorio"
 	set /p direccion="Direccion del repositorio: "
@@ -11,7 +13,6 @@ if NOT EXIST "%cd%/.git" (
 git pull
 git add .
 set /p ms="Mensaje de commit: "
-echo %ms%
 git commit -m "%ms%"
-rem git push
+git push
 git log --oneline
