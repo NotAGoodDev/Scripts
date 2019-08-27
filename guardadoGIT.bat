@@ -10,6 +10,7 @@ if NOT EXIST "%cd%/.git" (
 	set /p alias="Alias del repositorio: "
 	echo "-- Ahora debes crear el repositorio"
 	set /p direccion="Direccion del repositorio: "
+	echo %alias% %direccion%
 	git remote add %alias% %direccion%
 	git push -u origin master
 )
